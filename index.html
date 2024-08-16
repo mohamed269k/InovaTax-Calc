@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
 
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+
+<body>
+  <img id="logoimg" src="images/Inova.png">
+  <h1 id="titlepr">Income Tax Calculator</h1>
+  <input id="input-box" type="number" placeholder="Your annual income">
+  <button class="button-17" role="button" id="button1" onclick="calculateTax()" onclick="checkTable()" onclick="reset">Calculate</button>
+  <select id="country">
+    <option value="morocco">Morocco</option>
+    <option value="usa">USA</option>
+    <option value="france">France</option>
+    <option value="italy">Italy</option>
+    <option value="belgium">Belgium</option>
+  </select>
+  <h2 id="output-box"></h2>
+  <h3 id="monthly-val"></h3>
+  <h3 id="tax-rate"></h3>
+  </div>
+  <table id="tablenow">
+  <thead>
+    <tr>
+      <th colspan="2">Full Overview Of Income</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Net Income</td>
+      <td id="outbox"></td>
+    </tr>
+    <tr>
+      <td>Monthly Income</td>
+      <td id="monthicn"></td>
+
+    </tr>
+    <tr>
+      <td>Hourly Rate / 8 hours</td>
+      <td id="hourly-rate"></td>
+    </tr>
+    
+    <tr>
+      <td>Tax Rate</td>
+      <td id="taxrate"></td>
+    </tr>
+  </tbody>
+</table>
+  <button class="button8" id="button4" type="button" onclick="tableToCSV()">Download as CSV ( .csv )</button>
+  <button class="button7" type="button" onclick="tableToExcel()">Download as Excel ( .xlsx )</button>
+  <button onclick="reset()" class="button-18">Reset</button>
+  <script src="main.js"></script>
+</body>
+    </html>
